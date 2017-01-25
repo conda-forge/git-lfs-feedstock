@@ -16,7 +16,7 @@ source:
 
   url: {{ download_url }}/v{{ version }}/git-lfs-windows-amd64-{{ version }}.zip  # [win]
   fn: git-lfs-windows-amd64-{{ version }}.zip  # [win]
-  sha256: 33c0facff41052ecb5cdcf9e42f7bb8300e95162b788820f91ea39bb3a669b6a  # [win]
+  sha256: 7c23635f34b0b4eed55621231148ef3e0de9a46e2d629b4bba7f706a96ae77ea  # [win]
 
 build:
   number: 0

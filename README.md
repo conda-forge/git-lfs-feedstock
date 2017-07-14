@@ -14,9 +14,9 @@ Summary: An open source Git extension for versioning large files
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/git-lfs-feedstock_20170714-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/git-lfs-feedstock_20170714-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/git-lfs-feedstock_20170714-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/git-lfs-feedstock_20170714-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/git-lfs-feedstock_20170714-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/git-lfs-feedstock-20170714-feedstock/branch/master)
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/git-lfs-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/git-lfs-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/git-lfs-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/git-lfs-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/git-lfs-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/git-lfs-feedstock/branch/master)
 
 Current release info
 ====================

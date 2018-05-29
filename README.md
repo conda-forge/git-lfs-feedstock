@@ -14,14 +14,16 @@ Summary: An open source Git extension for versioning large files
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/git-lfs-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/git-lfs-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/git-lfs-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/git-lfs-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/git-lfs-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/git-lfs-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/git-lfs-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/git-lfs-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/git-lfs-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/git-lfs-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/git-lfs-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/git-lfs-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/git-lfs/badges/version.svg)](https://anaconda.org/conda-forge/git-lfs)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/git-lfs/badges/downloads.svg)](https://anaconda.org/conda-forge/git-lfs)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-git--lfs-green.svg)](https://anaconda.org/conda-forge/git-lfs) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/git-lfs.svg)](https://anaconda.org/conda-forge/git-lfs) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/git-lfs.svg)](https://anaconda.org/conda-forge/git-lfs) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/git-lfs.svg)](https://anaconda.org/conda-forge/git-lfs) |
 
 Installing git-lfs
 ==================

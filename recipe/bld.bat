@@ -1,3 +1,3 @@
-copy git-lfs.exe %LIBRARY_BIN%
+mv git-lfs-windows-amd64.exe "%LIBRARY_BIN%\git-lfs.exe"
 
-if errorlevel 1 exit 1
+IF %ERRORLEVEL% NEQ 0 exit 1

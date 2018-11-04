@@ -21,6 +21,10 @@ source:
 build:
   number: 0
 
+requirements:
+  build:
+    - git               # [unix]
+
 test:
   commands:
     - git-lfs --help

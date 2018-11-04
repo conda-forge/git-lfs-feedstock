@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-bash install.sh
+set -o xtrace -o errexit
+
+bash -x install.sh

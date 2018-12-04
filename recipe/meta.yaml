@@ -23,7 +23,8 @@ build:
 
 requirements:
   build:
-    - git               # [unix]
+    - git                 # [unix]
+    - conda-build < 3.17  # [unix]
 
 test:
   commands:

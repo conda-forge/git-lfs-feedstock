@@ -1,4 +1,4 @@
-{% set version = "2.11.0" %}
+{% set version = "2.12.0" %}
 {% set download_url = "https://github.com/git-lfs/git-lfs/releases/download" %}
 
 package:
@@ -8,15 +8,15 @@ package:
 source:
   url: {{ download_url }}/v{{ version }}/git-lfs-linux-amd64-v{{ version }}.tar.gz  # [linux]
   fn: git-lfs-linux-amd64-{{ version }}.tar.gz  # [linux]
-  sha256: 46508eb932c2ec0003a940f179246708d4ddc2fec439dcacbf20ff9e98b957c9  # [linux]
+  sha256: f9befd0fa0b19517b8ed14ab07812f0d39d776d8c9ea0023e343e30ff300813f  # [linux]
 
-  url: {{ download_url }}/v{{ version }}/git-lfs-darwin-amd64-v{{ version }}.tar.gz  # [osx]
+  url: {{ download_url }}/v{{ version }}/git-lfs-darwin-amd64-v{{ version }}.zip  # [osx]
   fn: git-lfs-darwin-amd64-{{ version }}.tar.gz  # [osx]
-  sha256: d4ae4db762f037de6224b2524adfccb736105bdcbb59c788da381e69a320e151  # [osx]
+  sha256: 1efa512f27113d560552d6e9008af422d4007e5cf20735e2f5109ad04c9add21  # [osx]
 
   url: {{ download_url }}/v{{ version }}/git-lfs-windows-amd64-v{{ version }}.zip  # [win]
   fn: git-lfs-windows-amd64-{{ version }}.zip  # [win]
-  sha256: ca05b0b9bd39d99665045776a5d0d5c7bfa2605a6118c2f489bfd40c2c3e4f2c  # [win]
+  sha256: 6d9418bf28ec59d5875a6bc51e56241c6a54916b3beedc802e137d8d76ab1db5  # [win]
 
 build:
   number: 0

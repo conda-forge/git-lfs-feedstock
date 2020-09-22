@@ -28,6 +28,7 @@ requirements:
 test:
   commands:
     - which git-lfs     # [unix]
+    - git lfs install   # [unix]
     - git-lfs --help
 
 about:

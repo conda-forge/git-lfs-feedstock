@@ -26,6 +26,8 @@ requirements:
     - git               # [unix]
 
 test:
+  requires:
+    - git               # [osx]
   commands:
     - git-lfs --help
 

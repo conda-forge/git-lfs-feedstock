@@ -11,7 +11,7 @@ source:
   sha256: f1ad07284dfdefaca96fbd047b804dd95731332c90ae79acc30a5ab575a42c5c  # [linux]
 
   url: {{ download_url }}/v{{ version }}/git-lfs-darwin-amd64-v{{ version }}.zip  # [osx]
-  fn: git-lfs-darwin-amd64-{{ version }}.tar.gz  # [osx]
+  fn: git-lfs-darwin-amd64-{{ version }}.zip  # [osx]
   sha256: df9321896c7537969911227d900861c6ca840b2f1ac5fd5c7e5deeb2bf9c2cbd  # [osx]
 
   url: {{ download_url }}/v{{ version }}/git-lfs-windows-amd64-v{{ version }}.zip  # [win]

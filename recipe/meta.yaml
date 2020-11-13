@@ -29,6 +29,8 @@ test:
   requires:
     - git               # [osx]
   commands:
+    - which git-lfs  # [osx]
+    - ls -al $(which git-lfs)  # [osx]
     - git-lfs --help
 
 about:

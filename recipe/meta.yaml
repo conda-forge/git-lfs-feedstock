@@ -28,8 +28,6 @@ requirements:
     - git               # [unix]
 
 test:
-  requires:
-    - git               # [osx]
   commands:
     - codesign -d -vvv $(which git-lfs)             # [osx]
     - shasum -a 256 $(which git-lfs)                # [osx]

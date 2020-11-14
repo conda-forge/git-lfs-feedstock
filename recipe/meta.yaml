@@ -32,7 +32,7 @@ test:
     - which git-lfs  # [osx]
     - ls -al $(which git-lfs)  # [osx]
     - xattr -l $(which git-lfs)  # [osx]
-    - xattr -d com.apple.quarantine $(which git-lfs)  # [osx]
+    - codesign -d -vvv $(which git-lfs)  # [osx]
     - git-lfs --help
     - exit 1  # [osx]
 

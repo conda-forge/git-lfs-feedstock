@@ -20,6 +20,8 @@ source:
 
 build:
   number: 0
+  binary_relocation: false
+  detect_binary_files_with_prefix: false
 
 requirements:
   build:
@@ -29,14 +31,10 @@ test:
   requires:
     - git               # [osx]
   commands:
-    - which git-lfs  # [osx]
-    - ls -al $(which git-lfs)  # [osx]
-    - xattr -l $(which git-lfs)  # [osx]
-    - codesign -d -vvv $(which git-lfs)  # [osx]
-    - shasum -a 256 $(which git-lfs)  # [osx]
-    - codesign --verify --verbose $(which git-lfs)  # [osx]
+    - codesign -d -vvv $(which git-lfs)             # [osx]
+    - shasum -a 256 $(which git-lfs)                # [osx]
+    #- codesign --verify --verbose $(which git-lfs)  # [osx]
     - git-lfs --help
-    - exit 1  # [osx]
 
 about:
   home: https://git-lfs.github.com/

@@ -7,16 +7,19 @@ package:
 
 source:
   url: {{ download_url }}/v{{ version }}/git-lfs-linux-amd64-v{{ version }}.tar.gz  # [linux]
-  fn: git-lfs-linux-amd64-{{ version }}.tar.gz  # [linux]
   sha256: f1ad07284dfdefaca96fbd047b804dd95731332c90ae79acc30a5ab575a42c5c  # [linux]
 
   url: {{ download_url }}/v{{ version }}/git-lfs-darwin-amd64-v{{ version }}.zip  # [osx]
-  fn: git-lfs-darwin-amd64-{{ version }}.zip  # [osx]
   sha256: df9321896c7537969911227d900861c6ca840b2f1ac5fd5c7e5deeb2bf9c2cbd  # [osx]
 
   url: {{ download_url }}/v{{ version }}/git-lfs-windows-amd64-v{{ version }}.zip  # [win]
-  fn: git-lfs-windows-amd64-{{ version }}.zip  # [win]
   sha256: 1243626c8b7d3607e1335c31cc00972e34904a568dcfb48e7c0f404877cceadc  # [win]
+
+  url: {{ download_url }}/v{{ version }}/git-lfs-linux-arm64-v{{ version }}.tar.gz  # [aarch64]
+  sha256: 53d6851160f71fdd0c243fc3435e8eec92b116d7a9ea30fa923eb533cbbd6052  # [aarch64]
+
+  url: {{ download_url }}/v{{ version }}/git-lfs-linux-ppc64le-v{{ version }}.tar.gz  # [ppc64le]
+  sha256: a738e35f102c1849d9e0565ac88aeb9d6797d7f9e9b8c5a082b9632a0ddf8169  # [ppc64le]
 
 build:
   number: 0

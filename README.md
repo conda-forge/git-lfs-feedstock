@@ -1,11 +1,11 @@
-About git-lfs
-=============
+About git-lfs-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/git-lfs-feedstock/blob/main/LICENSE.txt)
 
 Home: https://git-lfs.github.com/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/git-lfs-feedstock/blob/main/LICENSE.txt)
 
 Summary: An open source Git extension for versioning large files
 

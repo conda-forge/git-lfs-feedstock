@@ -17,6 +17,7 @@ build:
   number: 1
   script:
     - cd {{ pkg_src }}
+    - go generate ./commands
     - go build -v -ldflags "-w -s" -o $PREFIX/bin/git-lfs  # [build_platform != target_platform]
     - go install -v -ldflags "-w -s" .                     # [build_platform == target_platform]
     - go-licenses save . --save_path={{ SRC_DIR }}/license_files || true

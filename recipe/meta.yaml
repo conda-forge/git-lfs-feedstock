@@ -20,6 +20,8 @@ build:
     - go build -v -ldflags "-w -s" -o $PREFIX/bin/git-lfs  # [build_platform != target_platform]
     - go install -v -ldflags "-w -s" .                     # [build_platform == target_platform]
     - go-licenses save . --save_path={{ SRC_DIR }}/license_files || true
+    # Clear cache to avoid excessive file not removable warnings
+    - chmod -R u+w $(go env GOPATH) && rm -r $(go env GOPATH)
 
 requirements:
   build:

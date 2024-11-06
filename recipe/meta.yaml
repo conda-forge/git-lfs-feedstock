@@ -17,7 +17,6 @@ build:
   number: 1
   script:
     - set -x                                               # [unix]
-    - "env | sort"  # [unix]
     - cd {{ pkg_src }}
     - go generate ./commands                               # [not (osx and arm64)]
     - GOARCH=amd64 go generate ./commands                  # [osx and arm64]

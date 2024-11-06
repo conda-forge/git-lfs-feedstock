@@ -34,11 +34,12 @@ requirements:
 
 test:
   requires:
-    - git
+    - git  # [not win]
   commands:
     - git-lfs --help
     - where git-lfs       # [win]
     - echo %Path%         # [win]
+    - "%PREFIX%\Library\bin\git-lfs.exe --version"  # [win]
     - git-lfs --version
     - git lfs --version
 

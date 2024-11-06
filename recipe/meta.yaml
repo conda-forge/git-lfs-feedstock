@@ -16,15 +16,16 @@ source:
 build:
   number: 1
   script:
-    - set -x                                               # [unix]
+    - set -x                                                            # [unix]
     - cd {{ pkg_src }}
-    - go generate ./commands                               # [not (osx and arm64)]
-    - GOARCH=amd64 go generate ./commands                  # [osx and arm64]
-    - go build -v -ldflags "-w -s" -o $PREFIX/bin/git-lfs  # [build_platform != target_platform]
-    - go install -v -ldflags "-w -s" .                     # [build_platform == target_platform]
+    - go generate ./commands                                            # [not (osx and arm64)]
+    - GOARCH=amd64 go generate ./commands                               # [osx and arm64]
+    - go build -v -ldflags "-w -s" -o $PREFIX/bin/git-lfs               # [build_platform != target_platform]
+    - go install -v -ldflags "-w -s" .                                  # [build_platform == target_platform and not win]
+    - go build -v -ldflags "-w -s" -o %PREFIX%\Library\bin\git-lfs.exe  # [win]
     - go-licenses save . --save_path={{ SRC_DIR }}/license_files || true
     # Clear cache to avoid excessive file not removable warnings
-    - chmod -R u+w $(go env GOPATH) && rm -r $(go env GOPATH)  # [unix]
+    - chmod -R u+w $(go env GOPATH) && rm -r $(go env GOPATH)           # [unix]
 
 requirements:
   build:

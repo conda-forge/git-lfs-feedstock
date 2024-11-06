@@ -37,6 +37,8 @@ test:
     - git
   commands:
     - git-lfs --help
+    - where git-lfs       # [win]
+    - echo %Path%         # [win]
     - git-lfs --version
     - git lfs --version
 

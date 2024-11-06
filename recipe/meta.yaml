@@ -32,9 +32,12 @@ requirements:
     - go-licenses
 
 test:
+  requires:
+    - git
   commands:
     - git-lfs --help
     - git-lfs --version
+    - git lfs --version
 
 about:
   home: https://git-lfs.github.com/

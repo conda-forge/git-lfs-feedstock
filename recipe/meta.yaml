@@ -16,7 +16,8 @@ source:
 build:
   number: 1
   script:
-    - set -x    # [unix]
+    - set -x        # [unix]
+    - "env | sort"  # [unix]
     - cd {{ pkg_src }}
     - go generate ./commands
     - go build -v -ldflags "-w -s" -o $PREFIX/bin/git-lfs  # [build_platform != target_platform]

@@ -1,5 +1,5 @@
 {% set goname = "github.com/git-lfs/git-lfs" %}
-{% set version = "3.5.1" %}
+{% set version = "3.6.0" %}
 
 {% set name = goname.split('/')[-1] %}
 {% set pkg_src = ('src/'+goname).replace("/",os.sep) %}
@@ -11,10 +11,10 @@ package:
 source:
   - folder: {{ pkg_src }}
     url: https://{{ goname }}/archive/v{{ version }}.tar.gz
-    sha256: d682a12c0bc48d08d28834dd0d575c91d53dd6c6db63c45c2db7c3dd2fb69ea4
+    sha256: 329173f2b543f554d2a8f90ffd655e26430c61d4ab1811dbeea9dd4640e3e076
 
 build:
-  number: 1
+  number: 0
   script:
     - set -x                                                            # [unix]
     - cd {{ pkg_src }}

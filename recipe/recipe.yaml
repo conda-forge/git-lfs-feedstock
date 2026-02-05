@@ -14,7 +14,7 @@ source:
     target_directory: github.com/git-lfs/git-lfs
 
 build:
-  number: 0
+  number: 1
   script:
     env:
       GOFLAGS: -buildmode=pie -trimpath -ldflags=-linkmode=external -mod=vendor -modcacherw

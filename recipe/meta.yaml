@@ -14,7 +14,7 @@ source:
     sha256: 0e83566a9e2477e03627e7fd6bf81f01fadbf93dcaf6abd2686fca90f6bac7dd
 
 build:
-  number: 0
+  number: 1
   script:
     - set -x                                                            # [unix]
     - cd {{ pkg_src }}

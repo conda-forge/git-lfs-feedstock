@@ -33,11 +33,13 @@ build:
       - if: win
         then:
           - md "%LIBRARY_PREFIX%\share\bash-completion\completions" "%LIBRARY_PREFIX%\share\fish\vendor_completions.d" "%LIBRARY_PREFIX%\share\zsh\site-functions"
-          - copy t/fixtures/completions/git-lfs-completion.bash "%LIBRARY_PREFIX%\share\bash-completion\completions\git-lfs"
-          - copy t/fixtures/completions/git-lfs-completion.fish "%LIBRARY_PREFIX%\share\fish\vendor_completions.d\git-lfs.fish"
-          - copy t/fixtures/completions/git-lfs-completion.zsh  "%LIBRARY_PREFIX%\share\zsh\site-functions\_git-lfs"
+          - dir t\fixtures\completions
+          - copy t\fixtures\completions\git-lfs-completion.bash "%LIBRARY_PREFIX%\share\bash-completion\completions\git-lfs"
+          - copy t\fixtures\completions\git-lfs-completion.fish "%LIBRARY_PREFIX%\share\fish\vendor_completions.d\git-lfs.fish"
+          - copy t\fixtures\completions\git-lfs-completion.zsh  "%LIBRARY_PREFIX%\share\zsh\site-functions\_git-lfs"
         else:
           - mkdir -p "${PREFIX}/share/bash-completion/completions" "${PREFIX}/share/fish/vendor_completions.d" "${PREFIX}/share/zsh/site-functions"
+          - ls t/fixtures/completions
           - cp t/fixtures/completions/git-lfs-completion.bash "${PREFIX}/share/bash-completion/completions/git-lfs"
           - cp t/fixtures/completions/git-lfs-completion.fish "${PREFIX}/share/fish/vendor_completions.d/git-lfs.fish"
           - cp t/fixtures/completions/git-lfs-completion.zsh  "${PREFIX}/share/zsh/site-functions/_git-lfs"

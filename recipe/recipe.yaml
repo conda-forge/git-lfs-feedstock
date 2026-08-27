@@ -14,21 +14,25 @@ source:
     target_directory: github.com/git-lfs/git-lfs
 
 build:
-  number: 3
+  number: 4
   script:
     env:
       GOFLAGS: -buildmode=pie -trimpath -ldflags=-linkmode=external -mod=vendor -modcacherw
     content:
       - ${{ 'set -x' if unix else '@echo on' }}
       - cd github.com/git-lfs/git-lfs
-      - ${{ 'GOARCH=amd64 ' if osx and arm64 }}go generate ./commands
-      - go build -v -ldflags "-w -s" ${{ '.' if (build_platform != target_platform) else '-o $PREFIX/bin/git-lfs' }}
-      - if: build_platform == target_platform and not win
+      - if: unix
         then:
-          - go install -v -ldflags "-w -s" .
+          - env -u GOARCH go generate ./commands
       - if: win
         then:
-          - go build -v -ldflags "-w -s" -o "%PREFIX%\Library\bin\git-lfs.exe"
+          - cmd /C "set GOARCH=&& go generate ./commands"
+      - if: unix
+        then:
+          - go build -v -ldflags "-w -s" -o "$PREFIX/bin/git-lfs"
+      - if: win
+        then:
+          - go build -v -ldflags "-w -s" -o "%LIBRARY_BIN%\git-lfs.exe"
       - go-licenses save . --save_path=${{ SRC_DIR }}/license_files || true
       - if: win
         then:
@@ -50,12 +54,16 @@ requirements:
     - go-licenses
 
 tests:
+  - package_contents:
+      bin:
+        - git-lfs
   - requirements:
       run:
-        - if: unix
+        - if: unix and not riscv64
           then: git
     script:
-      - git-lfs --help
+      - if: not riscv64
+        then: git-lfs --help
       - if: win
         then:
           - where git-lfs

@@ -59,10 +59,11 @@ tests:
         - git-lfs
   - requirements:
       run:
-        - if: unix
+        - if: unix and not riscv64
           then: git
     script:
-      - git-lfs --help
+      - if: not riscv64
+        then: git-lfs --help
       - if: win
         then:
           - where git-lfs

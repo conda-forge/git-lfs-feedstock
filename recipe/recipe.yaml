@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "3.7.1"
+  version: "3.8.0"
 
 package:
   name: git-lfs
@@ -10,11 +10,11 @@ package:
 
 source:
   - url: https://github.com/git-lfs/git-lfs/archive/v${{ version }}.tar.gz
-    sha256: 0e83566a9e2477e03627e7fd6bf81f01fadbf93dcaf6abd2686fca90f6bac7dd
+    sha256: a12ecfc17ebee002d1f6acca79442029d41cbf5e5b4ba9e02249ed96de20300f
     target_directory: github.com/git-lfs/git-lfs
 
 build:
-  number: 4
+  number: 0
   script:
     env:
       GOFLAGS: -buildmode=pie -trimpath -ldflags=-linkmode=external -mod=vendor -modcacherw

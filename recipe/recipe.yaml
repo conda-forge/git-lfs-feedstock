@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "3.8.0"
+  version: "3.8.1"
 
 package:
   name: git-lfs
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://github.com/git-lfs/git-lfs/archive/v${{ version }}.tar.gz
-    sha256: a12ecfc17ebee002d1f6acca79442029d41cbf5e5b4ba9e02249ed96de20300f
+    sha256: 6ab3e7ffa03014f3ca574f06c1df835ccf9e8c079a3c5c1134b95bdff9c106c0
     target_directory: github.com/git-lfs/git-lfs
 
 build:
